@@ -1,0 +1,4 @@
+autogen-agentchat==0.7.5
+autogen-core==0.7.5
+autogen-ext[ollama]==0.7.5
+pytest==9.1.1

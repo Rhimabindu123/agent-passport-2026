@@ -1,0 +1,32 @@
+{
+    "name": "Research Assistant",
+    "version": "1.0.0",
+    "description": "A portable AI research assistant with calculator capabilities.",
+    "input": {
+        "type": "text"
+    },
+    "output": {
+        "type": "text"
+    },
+    "capabilities": [
+        "question_answering",
+        "calculation"
+    ],
+    "tools": [
+        "calculate"
+    ],
+    "behavior": [
+        "Answer questions clearly",
+        "Use the calculator tool when calculations are required"
+    ],
+    "interface": {
+        "name": "PortableAgent",
+        "method": "run(question)"
+    },
+    "runtime": {
+        "framework": "AutoGen",
+        "adapter": "AutoGenAdapter",
+        "model": "llama3.2",
+        "provider": "Ollama"
+    }
+}
