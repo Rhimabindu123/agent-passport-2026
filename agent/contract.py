@@ -15,6 +15,12 @@ def verify_passport(passport):
         assert behavior in passport["behavior"]
 
     assert "calculate" in passport["tools"]
-    assert passport["runtime"]["adapter"] == "AutoGenAdapter"
+
+    supported_adapters = passport["runtime"]["supported_adapters"]
+
+    assert "AutoGenAdapter" in supported_adapters
+    assert "LangGraphAdapter" in supported_adapters
+
+    assert passport["runtime"]["default_adapter"] in supported_adapters
 
     return True

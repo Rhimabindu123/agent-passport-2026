@@ -24,8 +24,11 @@
         "method": "run(question)"
     },
     "runtime": {
-        "framework": "AutoGen",
-        "adapter": "AutoGenAdapter",
+           "default_adapter": "AutoGenAdapter",
+    "supported_adapters": [
+        "AutoGenAdapter",
+        "LangGraphAdapter"
+    ],
         "model": "llama3.2",
         "provider": "Ollama"
     }
